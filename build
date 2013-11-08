@@ -1,0 +1,8 @@
+#!/bin/bash
+set -eu
+
+gem install builder bundler
+bundle install
+rm -vf *.gem
+#bundle exec rspec spec
+gem build nanogenmo.gemspec
