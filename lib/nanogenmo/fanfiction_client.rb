@@ -25,7 +25,7 @@ module NaNoGenMo
     #   http://www.fanfiction.net/Sonic-the-Hedgehog-and-My-Little-Pony-Crossovers/253/621/
     #   http://www.fanfiction.net/search.php?keywords=cupcakes&ready=1&type=story
     #   http://www.fanfiction.net/u/1234567/UserName
-    def self.search_page_to_page_urls(search_page_url, max_pages = 100)
+    def self.search_page_to_page_urls(search_page_url)
       uri = URI.parse(search_page_url)
       baseURL = "#{uri.scheme}://#{uri.host}"
       story_urls = Nokogiri::HTML(fetch_page(search_page_url)).css("a.#{STORY_LINK_CLASS}").map{|tag| baseURL + tag['href']}
