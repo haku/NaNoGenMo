@@ -2,7 +2,7 @@
 
 Gem::Specification.new do |s|
   s.name        = 'nanogenmo'
-  s.version     = '1'
+  s.version     = '0.0.1'
   s.date        = '2013-11-08'
   s.summary     = 'National Novel Generation Month.'
   s.description = 'A script to automatically generate a 50,000-word "novel" during November, as an alternative to writing it.'
