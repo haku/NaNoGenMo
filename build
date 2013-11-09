@@ -6,3 +6,7 @@ bundle install
 rm -vf *.gem
 #bundle exec rspec spec
 gem build nanogenmo.gemspec
+
+if [ "$1" = "install" ] ; then
+  gem install nanogenmo-*.gem
+fi

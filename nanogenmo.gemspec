@@ -1,7 +1,7 @@
 # -*- encoding: utf-8 -*-
 
 Gem::Specification.new do |s|
-  s.name        = 'NaNoGenMo'
+  s.name        = 'nanogenmo'
   s.version     = '1'
   s.date        = '2013-11-08'
   s.summary     = 'National Novel Generation Month.'
@@ -9,9 +9,12 @@ Gem::Specification.new do |s|
   s.homepage    = 'https://github.com/ianrenton/NaNoGenMo'
   s.authors     = ['Ian Renton', 'haku']
 
-  s.files       = ['lib/fanfiction_client.rb',
-                   'lib/sentence_indexer.rb',
-                   'lib/story_generator.rb']
+  s.files       = ['lib/nanogenmo.rb',
+                   'lib/nanogenmo/fanfiction_client.rb',
+                   'lib/nanogenmo/sentence_indexer.rb',
+                   'lib/nanogenmo/story_generator.rb',
+                   'lib/nanogenmo/utils.rb']
+  s.executables = ['nanogenmo']
   s.test_files  = []
   s.require_paths = ["lib"]
 

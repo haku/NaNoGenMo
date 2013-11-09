@@ -1,0 +1,14 @@
+#!/usr/bin/env ruby
+require 'nanogenmo'
+
+def die(msg)
+  puts msg
+  exit 1
+end
+
+base_url = ARGV[0]
+die("No base URL specified (e.g. nanogenmo 'http://www.fanfiction.net/tv/Doctor-Who/'.") if base_url.nil?
+die("Invalid URL: #{base_url}") if !(base_url =~ URI::regexp)
+
+page_urls = NaNoGenMo::FanficitonNetClient.search_page_to_page_urls(base_url)
+puts page_urls
